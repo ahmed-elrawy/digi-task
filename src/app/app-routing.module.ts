@@ -4,16 +4,19 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'currency-exchanger',
+    redirectTo: 'products',
     pathMatch: 'full',
   },
+
   {
-    path: 'currency-exchanger',
+    path: 'products',
     loadChildren: () =>
-      import('./modules/home/home.module').then(
-        (m) => m.HomeModule
+      import('./modules/products/product.module').then(
+        (m) => m.ProductModule
       ),
-  }
+  },
+
+  
 ];
 
 @NgModule({

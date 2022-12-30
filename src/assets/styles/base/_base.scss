@@ -26,23 +26,3 @@ a, button /* &c... */ {
   all: unset;
 }
 
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #555 ; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $color-grey-dark;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background:$color-dark ; 
-}
-
