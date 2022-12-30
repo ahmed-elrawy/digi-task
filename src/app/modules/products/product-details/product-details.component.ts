@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
+import { map } from 'rxjs';
 import { Product } from 'src/app/@core/data/products';
 import { ProductsService } from '../products.service';
 
@@ -14,12 +15,14 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productService:ProductsService,private route: ActivatedRoute   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(prm => {
-      this.productService.productDetails(prm['id']).subscribe(res => {
-        this.product= res
-        console.log(res);
-        
-      })
-    })
+    this.route.data.pipe( //featch tha data by Resolver 
+    map((data) => {
+      
+     return data
+     })
+    ).subscribe(res =>{
+    this.product = res['resolve']     
+  })
+
   }
 }

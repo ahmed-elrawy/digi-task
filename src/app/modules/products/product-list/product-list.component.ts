@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from 'src/app/@core/data/products';
 import { ProductsService } from '../products.service';
 
@@ -16,9 +16,7 @@ export class ProductListComponent implements OnInit {
 	constructor(private modalService: NgbModal, private productService:ProductsService) {}
 	ngOnInit(): void {
 		this.productService.products().subscribe(res => {
-			this.products=res
-			console.log(res);
-			
+			this.products=res			
 		})
 	}
 

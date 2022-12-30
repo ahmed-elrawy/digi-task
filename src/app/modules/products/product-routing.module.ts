@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import { productDetailsResolver } from 'src/app/@core/resolvers/product-details-resolver.service';
 import { LayoutComponent } from 'src/app/@shared/components/layout/layout.component';
 import { NotFoundComponent } from 'src/app/@shared/components/not-found/not-found.component';
 import { AddProductComponent } from './add-product/add-product.component';
@@ -23,13 +24,16 @@ children = [
   {
     path: 'add-product',
     component: AddProductComponent,
-    data: { tab: 1 }
+    data: { tab: 2 }
   },
 
   {
     path: 'product-details/:id',
     component: ProductDetailsComponent,
-    data: { tab: 2 }
+    resolve: {
+      resolve: productDetailsResolver
+    },
+    data: { tab: 3 }
   },
 
   {
