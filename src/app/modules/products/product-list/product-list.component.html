@@ -10,16 +10,17 @@
 		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click'); addProduct.submit()">Save</button>
 	</div>
 </ng-template>
-	
-<button class="btn btn-lg btn-outline-primary add-btn " (click)="open(content)">Add product</button>
+    <div class="add-btn">
+        <button class="btn btn-lg btn-outline-primary add-btn " (click)="open(content)">Add product</button>
+    </div>
 
 
 
 
 
 <div class="container mt-5 mb-5">
-    <div class="d-flex justify-content-center row">
-        <div class="col-md-10" *ngFor="let product of products">
+    <div class="d-flex justify-content-center row mt-5">
+        <div class="col-md-10 mt-5" *ngFor="let product of products">
    
             <div class="row p-2 bg-white border rounded mt-2">
                 <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" [src]="product.image"></div>

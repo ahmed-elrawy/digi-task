@@ -23,7 +23,7 @@ children = [
   {
     path: 'add-product',
     component: AddProductComponent,
-    data: { tab: 2 }
+    data: { tab: 1 }
   },
 
   {
