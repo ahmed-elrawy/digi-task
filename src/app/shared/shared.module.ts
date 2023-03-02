@@ -14,7 +14,8 @@ import {RouterModule} from '@angular/router';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    // MaterialModule
   ],
   declarations: [
     ...Shared.pipes,
@@ -24,6 +25,7 @@ import {RouterModule} from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    // MaterialModule,
     ...Shared.pipes,
     ...Shared.components
   ]
