@@ -23,14 +23,8 @@ export class AddProductComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.addProduct.value);
-
-    this.productService.addproduct(this.addProduct.value).subscribe(res => {
-      console.log(res);
-      
+    this.productService.addProduct(this.addProduct.value).subscribe(res => {
     })
-    
-
   }
 
 }

@@ -1,7 +1,7 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from '../@shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from 'src/app/@core/data/products';
+import { Product } from '@core/data/products';
 import {environment as env} from '../../../environments/environment';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class ProductsService {
   productDetails(id:number): Observable<any> {
     return this.http.get<any>(`${env.ApiUrl}products/${id}`)
   }
-  addproduct(body:Product): Observable<Product> {
+  addProduct(body:Product): Observable<Product> {
     return this.http.post<Product>(`${env.ApiUrl}products`,body)
   }
 }
