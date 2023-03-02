@@ -16,9 +16,6 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     CoreModule,
   ],
-  providers: [
-    // {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
